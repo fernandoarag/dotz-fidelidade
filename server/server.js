@@ -140,5 +140,5 @@ server.use(jsonServer.rewriter(router));
 server.use(router);
 
 server.listen(3001, () => {
-  console.log('JSON Server está rodando na porta 3001');
+  console.info('JSON Server está rodando na porta 3001');
 });
