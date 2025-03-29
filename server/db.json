@@ -1,0 +1,204 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "João Silva",
+      "email": "joao@example.com",
+      "phone": "(11) 98765-4321",
+      "pointsBalance": 10000,
+      "createdAt": "2023-01-15T14:30:00Z"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "1",
+      "userId": "1",
+      "street": "Rua das Flores",
+      "number": "123",
+      "complement": "Apto 45",
+      "neighborhood": "Jardim Primavera",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01234-567",
+      "isDefault": true
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "street": "Av. Paulista",
+      "number": "1000",
+      "complement": "Sala 510",
+      "neighborhood": "Bela Vista",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01310-000",
+      "isDefault": false
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "userId": "1",
+      "type": "EARN",
+      "points": 500,
+      "description": "Compra no Supermercado XYZ",
+      "createdAt": "2023-03-10T10:15:00Z"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "type": "EARN",
+      "points": 750,
+      "description": "Pagamento de fatura do cartão",
+      "createdAt": "2023-03-15T14:30:00Z"
+    },
+    {
+      "id": "3",
+      "userId": "1",
+      "type": "REDEEM",
+      "points": 1200,
+      "description": "Resgate de fone de ouvido",
+      "createdAt": "2023-03-20T16:45:00Z"
+    },
+    {
+      "id": "4",
+      "userId": "1",
+      "type": "EARN",
+      "points": 300,
+      "description": "Compra na Loja ABC",
+      "createdAt": "2023-03-25T09:00:00Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Eletrônicos",
+      "description": "Produtos eletrônicos e gadgets",
+      "imageUrl": "https://source.unsplash.com/random/300x200/?electronics"
+    },
+    {
+      "id": "2",
+      "name": "Casa e Decoração",
+      "description": "Produtos para sua casa",
+      "imageUrl": "https://source.unsplash.com/random/300x200/?home"
+    },
+    {
+      "id": "3",
+      "name": "Viagens",
+      "description": "Pacotes de viagem e experiências",
+      "imageUrl": "https://source.unsplash.com/random/300x200/?travel"
+    },
+    {
+      "id": "4",
+      "name": "Entretenimento",
+      "description": "Ingressos, assinaturas e diversão",
+      "imageUrl": "https://source.unsplash.com/random/300x200/?entertainment"
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "name": "Fone de Ouvido Bluetooth",
+      "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de longa duração.",
+      "pointsPrice": 5000,
+      "categoryId": "1",
+      "imageUrl": "https://source.unsplash.com/random/400x300/?headphones",
+      "available": true
+    },
+    {
+      "id": "2",
+      "name": "Smartwatch",
+      "description": "Relógio inteligente com monitor cardíaco, GPS e diversas funcionalidades.",
+      "pointsPrice": 8000,
+      "categoryId": "1",
+      "imageUrl": "https://source.unsplash.com/random/400x300/?smartwatch",
+      "available": true
+    },
+    {
+      "id": "3",
+      "name": "Jogo de Panelas",
+      "description": "Conjunto de panelas antiaderentes de alta qualidade para sua cozinha.",
+      "pointsPrice": 3500,
+      "categoryId": "2",
+      "imageUrl": "https://source.unsplash.com/random/400x300/?cookware",
+      "available": true
+    },
+    {
+      "id": "4",
+      "name": "Passagem Aérea",
+      "description": "Passagem aérea de ida e volta para destinos nacionais.",
+      "pointsPrice": 12000,
+      "categoryId": "3",
+      "imageUrl": "https://source.unsplash.com/random/400x300/?airplane",
+      "available": true
+    },
+    {
+      "id": "5",
+      "name": "Assinatura de Streaming",
+      "description": "Um ano de assinatura em plataforma de streaming de vídeo.",
+      "pointsPrice": 4000,
+      "categoryId": "4",
+      "imageUrl": "https://source.unsplash.com/random/400x300/?streaming",
+      "available": true
+    },
+    {
+      "id": "6",
+      "name": "Cafeteira Elétrica",
+      "description": "Cafeteira programável com filtro permanente e jarra térmica.",
+      "pointsPrice": 2500,
+      "categoryId": "2",
+      "imageUrl": "https://source.unsplash.com/random/400x300/?coffee-maker",
+      "available": false
+    }
+  ],
+  "orders": [
+    {
+      "id": "1",
+      "userId": "1",
+      "products": [
+        {
+          "productId": "1",
+          "quantity": 1,
+          "pointsPrice": 5000,
+          "product": {
+            "id": "1",
+            "name": "Fone de Ouvido Bluetooth",
+            "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de longa duração.",
+            "pointsPrice": 5000,
+            "categoryId": "1",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?headphones",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 5000,
+      "status": "DELIVERED",
+      "addressId": "1",
+      "createdAt": "2023-03-20T16:45:00Z"
+    },
+    {
+      "id": "2",
+      "userId": "1",
+      "products": [
+        {
+          "productId": "3",
+          "quantity": 1,
+          "pointsPrice": 3500,
+          "product": {
+            "id": "3",
+            "name": "Jogo de Panelas",
+            "description": "Conjunto de panelas antiaderentes de alta qualidade para sua cozinha.",
+            "pointsPrice": 3500,
+            "categoryId": "2",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?cookware",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 3500,
+      "status": "SHIPPED",
+      "addressId": "1",
+      "createdAt": "2023-04-15T10:30:00Z"
+    }
+  ]
+}

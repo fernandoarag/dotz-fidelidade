@@ -1,46 +1,158 @@
-# Getting Started with Create React App
+# Dotz - Sistema de Fidelidade
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto implementa um sistema de fidelidade para a DOTZ, permitindo que clientes se cadastrem, consultem saldo de pontos, visualizem extrato de transações, resgatem produtos e acompanhem pedidos.
 
-## Available Scripts
+## Tecnologias Utilizadas
 
-In the project directory, you can run:
+- **ReactJS (v18.0+)**: Framework para desenvolvimento do front-end
+- **TypeScript**: Para tipagem estática e maior robustez no código
+- **Styled-Components**: Para estilização dos componentes
+- **React Router**: Para gerenciamento de rotas da aplicação
+- **React Hook Form**: Para gerenciamento de formulários
+- **Yup**: Para validação de dados de formulários
+- **Axios**: Para requisições HTTP à API
+- **JSON Server**: Para simular a API REST
 
-### `npm start`
+## Arquitetura
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O projeto foi estruturado seguindo os princípios de **Clean Architecture** e **Clean Code**, organizando o código em camadas bem definidas:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **Core**: Contém as entidades de domínio e interfaces de repositórios
+- **Application**: Implementa os casos de uso da aplicação
+- **Infrastructure**: Contém as implementações concretas dos repositórios e serviços
+- **Presentation**: Responsável pela interface do usuário, incluindo componentes React, páginas e hooks
 
-### `npm test`
+Esta estrutura proporciona maior modularidade, testabilidade e manutenibilidade ao código.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Funcionalidades
 
-### `npm run build`
+- **Cadastro de usuário**: Registro com validação de dados
+- **Autenticação**: Login com armazenamento de token JWT
+- **Dashboard**: Visualização de saldo de pontos e últimas transações
+- **Gerenciamento de endereços**: Cadastro, edição e exclusão de endereços de entrega
+- **Catálogo de produtos**: Listagem com filtros por categoria, preço e busca textual
+- **Detalhe de produto**: Visualização e resgate de produtos
+- **Pedidos**: Listagem de pedidos com status de entrega
+- **Detalhe de pedido**: Acompanhamento de status de entrega e informações do pedido
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Como Executar o Projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Pré-requisitos
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Node.js (v16 ou superior)
+- npm ou yarn
 
-### `npm run eject`
+### Instalação
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Clone o repositório:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/seu-usuario/dotz-fidelidade.git
+cd dotz-fidelidade
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+2. Instale as dependências:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm install
+# ou
+yarn install
+```
 
-## Learn More
+3. Inicie o servidor mock (JSON Server):
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd server
+npm install -g json-server
+node server.js
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+4. Em outro terminal, inicie a aplicação React:
+
+```bash
+npm start
+# ou
+yarn start
+```
+
+5. Acesse a aplicação no navegador:
+
+```
+http://localhost:3000
+```
+
+### Usuário de teste
+
+Para testar a aplicação, você pode usar as seguintes credenciais:
+
+- **Email**: joao@example.com
+- **Senha**: qualquer senha funcionará no ambiente de desenvolvimento
+
+## Estrutura de Diretórios
+
+```
+src/
+├── core/                     # Camada de domínio
+│   ├── domain/               # Entidades e regras de negócio
+│   │   ├── entities/         # Entidades de domínio
+│   │   ├── repositories/     # Interfaces de repositórios
+│   │   └── services/         # Interfaces de serviços
+├── application/              # Casos de uso da aplicação
+│   ├── useCases/             # Casos de uso específicos
+│   │   ├── auth/             # Autenticação
+│   │   ├── user/             # Gerenciamento de usuário
+│   │   ├── product/          # Produtos
+│   │   └── order/            # Pedidos
+├── infrastructure/           # Implementações concretas
+│   ├── http/                 # Cliente HTTP (Axios)
+│   ├── repositories/         # Implementações dos repositórios
+│   ├── services/             # Implementações dos serviços
+│   ├── storage/              # Serviço de armazenamento local
+│   └── api/                  # Endpoints e métodos da API
+├── presentation/             # Interface do usuário
+│   ├── components/           # Componentes React
+│   │   ├── common/           # Componentes reutilizáveis
+│   │   ├── layout/           # Componentes de layout
+│   │   └── features/         # Componentes específicos de funcionalidade
+│   ├── hooks/                # Hooks customizados
+│   ├── pages/                # Páginas da aplicação
+│   ├── routes/               # Configuração de rotas
+│   ├── contexts/             # Contextos React
+│   └── theme/                # Tema do Styled-Components
+├── config/                   # Configurações da aplicação
+├── types/                    # Definições de tipos TypeScript
+├── utils/                    # Utilitários compartilhados
+├── App.tsx                   # Componente principal
+└── index.tsx                 # Ponto de entrada
+```
+
+## Sobre a API Mock
+
+A API mock simula o backend do sistema de fidelidade. Ela foi implementada usando JSON Server e fornece os seguintes endpoints:
+
+- `/api/auth/login`: Autenticação de usuários
+- `/api/users`: Gerenciamento de usuários
+- `/api/users/profile`: Perfil do usuário logado
+- `/api/users/addresses`: Endereços do usuário
+- `/api/products`: Catálogo de produtos
+- `/api/categories`: Categorias de produtos
+- `/api/orders`: Pedidos do usuário
+- `/api/transactions`: Transações de pontos
+
+Os dados são persistidos no arquivo `server/db.json` e resetados a cada reinicialização do servidor.
+
+## Design Responsivo
+
+A aplicação implementa design responsivo utilizando Styled Components e media queries, garantindo uma boa experiência em dispositivos móveis, tablets e desktops.
+
+## Melhorias Futuras
+
+- Implementação de testes unitários com Jest e React Testing Library
+- Implementação de filtros mais avançados e ordenação na listagem de produtos
+- Paginação nas listagens de produtos, pedidos e transações
+- Implementação de um sistema de notificações
+- Otimização de performance com React.memo e useMemo
+
+## Licença
+
+MIT
