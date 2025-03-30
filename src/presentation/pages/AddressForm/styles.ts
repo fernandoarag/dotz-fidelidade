@@ -1,5 +1,5 @@
+import { Card } from '@components/common/Card';
 import styled from 'styled-components';
-import { Card } from '../../components/common/Card/Card';
 
 export const PageTitle = styled.h1`
   margin-bottom: ${({ theme }) => theme.spacing.lg};

@@ -11,6 +11,7 @@ export interface FlexProps {
   align?: "flex-start" | "flex-end" | "center" | "stretch" | "baseline";
   wrap?: "nowrap" | "wrap" | "wrap-reverse";
   gap?: string;
+  padding?: string;
 }
 
 export const Flex = styled.div<FlexProps>`
@@ -19,6 +20,7 @@ export const Flex = styled.div<FlexProps>`
   justify-content: ${({ justify }) => justify || "flex-start"};
   align-items: ${({ align }) => align || "flex-start"};
   flex-wrap: ${({ wrap }) => wrap || "nowrap"};
+  padding: ${({ padding }) => padding || "0"};
 
   ${({ gap }) =>
     gap &&

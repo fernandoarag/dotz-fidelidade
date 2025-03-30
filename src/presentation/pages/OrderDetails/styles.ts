@@ -1,4 +1,4 @@
-import { Card } from '@components/common/Card/Card';
+import { Card } from '@components/common/Card';
 import styled from 'styled-components';
 
 export const PageTitle = styled.h1`
@@ -9,11 +9,22 @@ export const PageTitle = styled.h1`
 export const OrderSection = styled(Card)`
   margin-bottom: ${({ theme }) => theme.spacing.lg};
 `;
-
-export const SectionTitle = styled.h2`
-  font-size: ${({ theme }) => theme.typography.fontSize.large};
+export const OrderInfo = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.md};
-  color: ${({ theme }) => theme.colors.black};
+`;
+
+export const LoadingState = styled.div`
+  text-align: center;
+  padding: ${({ theme }) => theme.spacing.xl};
+`;
+
+export const ErrorState = styled.div`
+  text-align: center;
+  padding: ${({ theme }) => theme.spacing.xl};
+  background-color: ${({ theme }) => theme.colors.error};
+  color: ${({ theme }) => theme.colors.white};
+  border-radius: ${({ theme }) => theme.borderRadius.medium};
+  margin-bottom: ${({ theme }) => theme.spacing.lg};
 `;
 
 export const OrderHeader = styled.div`
@@ -29,10 +40,6 @@ export const OrderHeader = styled.div`
   }
 `;
 
-export const OrderInfo = styled.div`
-  margin-bottom: ${({ theme }) => theme.spacing.md};
-`;
-
 export const OrderNumber = styled.h3`
   margin: 0;
   color: ${({ theme }) => theme.colors.black};
@@ -42,6 +49,12 @@ export const OrderDate = styled.div`
   font-size: ${({ theme }) => theme.typography.fontSize.small};
   color: ${({ theme }) => theme.colors.gray.medium};
   margin-top: ${({ theme }) => theme.spacing.xs};
+`;
+
+export const SectionTitle = styled.h2`
+  font-size: ${({ theme }) => theme.typography.fontSize.large};
+  margin-bottom: ${({ theme }) => theme.spacing.md};
+  color: ${({ theme }) => theme.colors.black};
 `;
 
 export const ProductTable = styled.table`
@@ -75,21 +88,6 @@ export const AddressLine = styled.div`
   margin-bottom: ${({ theme }) => theme.spacing.xs};
 `;
 
-export const LoadingState = styled.div`
-  text-align: center;
-  padding: ${({ theme }) => theme.spacing.xl};
-`;
-
-export const ErrorState = styled.div`
-  text-align: center;
-  padding: ${({ theme }) => theme.spacing.xl};
-  background-color: ${({ theme }) => theme.colors.error};
-  color: ${({ theme }) => theme.colors.white};
-  border-radius: ${({ theme }) => theme.borderRadius.medium};
-  margin-bottom: ${({ theme }) => theme.spacing.lg};
-`;
-
-// Status do pedido com etapas
 export const OrderTracker = styled.div`
   display: flex;
   justify-content: space-between;
@@ -99,7 +97,7 @@ export const OrderTracker = styled.div`
   &::before {
     content: "";
     position: absolute;
-    top: 50%;
+    top: 22px;
     left: 0;
     right: 0;
     height: 2px;
@@ -136,9 +134,7 @@ export const TrackerStep = styled.div<{ active: boolean; completed: boolean }>`
       `;
     }
     if (active) {
-      return `
-        color: ${theme.colors.primary};
-      `;
+      return ` color: ${theme.colors.primary};`;
     }
     return `
       color: ${theme.colors.gray.medium};

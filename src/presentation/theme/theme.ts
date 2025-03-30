@@ -16,7 +16,7 @@ export const theme = {
     info: '#2196F3',
   },
   typography: {
-    fontFamily: "'Roboto', sans-serif",
+    fontFamily: "'Inter', sans-serif",
     fontSize: {
       small: '0.875rem', // 14px
       regular: '1rem', // 16px

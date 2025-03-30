@@ -1,6 +1,6 @@
-import { Flex } from "@components/common/Flex/Flex";
-import { ProductCard } from "@components/features/ProductCard/ProductCard";
-import { ProductFilters } from "@components/features/ProductFilters/ProductFilters";
+import { Flex } from "@components/common/Flex";
+import { ProductCard } from "@components/features/ProductCard";
+import { ProductFilters } from "@components/features/ProductFilters";
 import { useProducts } from "@hooks/useProducts";
 import type React from "react";
 import * as S from "./styles";

@@ -1,7 +1,7 @@
-import { TransactionCard } from "@/presentation/components/features/TransactionCard/TransactionCard";
-import { Button } from "@components/common/Button/Button";
-import { Flex } from "@components/common/Flex/Flex";
-import { PointsCard } from "@components/features/PointsCard/PointsCard";
+import { TransactionCard } from "@/presentation/components/features/TransactionCard";
+import { Button } from "@components/common/Button";
+import { Flex } from "@components/common/Flex";
+import { PointsCard } from "@components/features/PointsCard";
 import { useTransactions } from "@hooks/useTransactions";
 import type React from "react";
 import { Link } from "react-router-dom";

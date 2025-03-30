@@ -1,8 +1,9 @@
-import { Card } from '@components/common/Card/Card';
+import { Card } from '@components/common/Card';
 import styled from 'styled-components';
 
 export const FiltersContainer = styled(Card)`
   margin-bottom: ${({ theme }) => theme.spacing.lg};
+  width: 100%;
 `;
 
 export const FiltersTitle = styled.h3`

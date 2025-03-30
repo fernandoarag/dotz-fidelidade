@@ -1,12 +1,12 @@
-import { Button } from "@components/common/Button/Button";
-import { Flex } from "@components/common/Flex/Flex";
-import { OrderStatusBadge } from "@components/features/OrderStatusBadge/OrderStatusBadge";
+import { Button } from "@components/common/Button";
+import { Flex } from "@components/common/Flex";
+import { OrderStatusBadge } from "@components/features/OrderStatusBadge";
 import type { Address } from "@core/domain/entities/Address";
 import type { Order } from "@core/domain/entities/Order";
 import { useOrders } from "@hooks/useOrders";
 import { UserRepository } from "@infrastructure/repositories/UserRepository";
 import type React from "react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import * as S from "./styles";
 
@@ -23,7 +23,29 @@ export const OrderDetails: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // Ref para controlar se o componente está montado
+  const isMounted = useRef(true);
+
+  // Ref para controlar se a solicitação já foi feita
+  const fetchStarted = useRef(false);
+
   useEffect(() => {
+    // Definir que o componente está montado
+    isMounted.current = true;
+
+    // Limpar na desmontagem
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    // Se não temos ID ou já iniciamos a busca, não fazer nada
+    if (!id || fetchStarted.current) return;
+
+    // Marcar que a busca foi iniciada para evitar duplicação
+    fetchStarted.current = true;
+
     const fetchOrderDetails = async () => {
       if (!id) return;
 
@@ -32,6 +54,10 @@ export const OrderDetails: React.FC = () => {
 
         // Buscar pedido
         const orderData = await getOrderById(id);
+        console.info("Order Data: ", orderData);
+
+        // Verificar se o componente ainda está montado
+        if (!isMounted.current) return;
 
         if (!orderData) {
           setError("Pedido não encontrado");
@@ -41,22 +67,35 @@ export const OrderDetails: React.FC = () => {
         setOrder(orderData);
 
         // Buscar endereço de entrega
-        const userRepository = new UserRepository();
-        const addresses = await userRepository.getAddresses();
-        const deliveryAddress = addresses.find(
-          (addr) => addr.id === orderData.addressId
-        );
+        try {
+          const userRepository = new UserRepository();
+          const addresses = await userRepository.getAddresses();
 
-        if (deliveryAddress) {
-          setAddress(deliveryAddress);
+          // Verificar novamente se o componente está montado
+          if (!isMounted.current) return;
+
+          const deliveryAddress = addresses.find(
+            (addr) => addr.id === orderData.addressId
+          );
+
+          if (deliveryAddress) {
+            setAddress(deliveryAddress);
+          }
+        } catch (addressErr) {
+          console.error("Erro ao buscar endereço:", addressErr);
+          // Não definimos erro aqui porque o principal (pedido) já foi carregado
         }
 
         setError(null);
       } catch (err) {
-        setError("Erro ao carregar detalhes do pedido");
-        console.error(err);
+        if (isMounted.current) {
+          setError("Erro ao carregar detalhes do pedido");
+          console.error(err);
+        }
       } finally {
-        setLoading(false);
+        if (isMounted.current) {
+          setLoading(false);
+        }
       }
     };
 
@@ -64,7 +103,7 @@ export const OrderDetails: React.FC = () => {
   }, [id, getOrderById]);
 
   // Formatar data
-  const formatDate = (date: Date) => {
+  const formatDate = (date: Date | string) => {
     return new Date(date).toLocaleDateString("pt-BR", {
       day: "2-digit",
       month: "2-digit",

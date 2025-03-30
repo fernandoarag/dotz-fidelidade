@@ -1,4 +1,4 @@
-import { Card } from '@components/common/Card/Card';
+import { Card } from '@components/common/Card';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 

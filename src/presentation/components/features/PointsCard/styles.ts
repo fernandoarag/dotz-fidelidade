@@ -1,4 +1,4 @@
-import { Card } from '@components/common/Card/Card';
+import { Card } from '@components/common/Card';
 import styled from 'styled-components';
 
 export const PointsCardStyled = styled(Card)`

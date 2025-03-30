@@ -1,1 +1,0 @@
-{ "/api/*": "/$1", "/users/profile": "/users/1", "/users/points-balance": "/users/1" }

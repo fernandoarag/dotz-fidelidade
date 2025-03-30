@@ -1,16 +1,14 @@
-import { Button } from "@components/common/Button/Button";
-
-import { Flex } from "@components/common/Flex/Flex";
-import { Input } from "@components/common/Input/Input";
+import { Button } from "@components/common/Button";
+import { Flex } from "@components/common/Flex";
+import { Input } from "@components/common/Input";
 import { useAuth } from "@contexts/AuthContext";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useState } from "react";
 import type React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import * as S from "./styles";
-
 import * as yup from "yup";
+import * as S from "./styles";
 
 // Schema de validação
 const schema = yup.object().shape({

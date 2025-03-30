@@ -1,6 +1,6 @@
-import { Button } from "@components/common/Button/Button";
-import { Flex } from "@components/common/Flex/Flex";
-import { Input } from "@components/common/Input/Input";
+import { Button } from "@components/common/Button";
+import { Flex } from "@components/common/Flex";
+import { Input } from "@components/common/Input";
 import { useAuth } from "@contexts/AuthContext";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useAddresses } from "@hooks/useAddresses";

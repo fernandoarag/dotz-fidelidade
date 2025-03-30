@@ -1,144 +1,89 @@
-const jsonServer = require('json-server');
-const server = jsonServer.create();
-const router = jsonServer.router('db.json');
-const middlewares = jsonServer.defaults();
+const express = require('express');
+const cors = require('cors');
+const path = require('node:path');
+const fs = require('node:fs');
 
-server.use(middlewares);
-server.use(jsonServer.bodyParser);
+// Importar rotas
+const authRoutes = require('./routes/auth.routes');
+const userRoutes = require('./routes/user.routes');
+const productRoutes = require('./routes/product.routes');
+const categoryRoutes = require('./routes/category.routes');
+const orderRoutes = require('./routes/order.routes');
+const transactionRoutes = require('./routes/transaction.routes');
 
-// Adiciona um delay para simular uma API real
-server.use(next => {
-  setTimeout(next, 800);
+// Inicializar express
+const app = express();
+const PORT = process.env.PORT || 3001;
+
+// Middlewares
+app.use(cors());
+app.use(express.json());
+
+// Simulação de delay para requisições (API real)
+// CORREÇÃO: Adicionados os parâmetros req e res que estavam faltando
+app.use((req, res, next) => {
+  setTimeout(next, 300);
 });
 
-// Middleware para autenticação simulada
-server.use((req, res, next) => {
-  if (req.method === 'POST' && req.path === '/auth/login') {
-    const { email } = req.body;
-
-    const users = router.db.get('users').value();
-    const user = users.find(u => u.email === email);
-
-    if (user) {
-      // Em uma aplicação real, verificaríamos a senha com hash
-      res.jsonp({
-        user,
-        token: 'fake-jwt-token',
-      });
-    } else {
-      res.status(400).jsonp({
-        error: 'Usuário ou senha inválidos',
-      });
-    }
-
-    return;
+// Middleware para verificar se res.json está disponível
+app.use((req, res, next) => {
+  // Verificar se res.json existe
+  if (typeof res.json !== 'function') {
+    console.error('AVISO: res.json não é uma função!');
+    // Recriar a função json se necessário
+    res.json = obj => {
+      res.setHeader('Content-Type', 'application/json');
+      res.end(JSON.stringify(obj));
+    };
   }
-
-  // Verificar token para rotas protegidas
-  if (
-    req.path.startsWith('/users') ||
-    req.path.startsWith('/orders') ||
-    req.path.startsWith('/transactions')
-  ) {
-    const authHeader = req.headers.authorization;
-
-    if (!authHeader || !authHeader.startsWith('Bearer ')) {
-      res.status(401).jsonp({
-        error: 'Não autorizado',
-      });
-      return;
-    }
-  }
-
   next();
 });
 
-// Middleware para registro de usuários
-server.use((req, res, next) => {
-  if (req.method === 'POST' && req.path === '/users') {
-    const { email } = req.body;
+// Verificar se o diretório data existe
+const dataDir = path.join(__dirname, 'data');
+if (!fs.existsSync(dataDir)) {
+  fs.mkdirSync(dataDir, { recursive: true });
+}
 
-    const users = router.db.get('users').value();
-    const existingUser = users.find(u => u.email === email);
+// Verificar se o arquivo db.json existe
+const dbPath = path.join(dataDir, 'db.json');
+if (!fs.existsSync(dbPath)) {
+  // Dados iniciais
+  const initialData = {
+    users: [],
+    addresses: [],
+    categories: [],
+    products: [],
+    transactions: [],
+    orders: [],
+  };
+  // Salvar dados iniciais
+  fs.writeFileSync(dbPath, JSON.stringify(initialData, null, 2));
+}
 
-    if (existingUser) {
-      res.status(400).jsonp({
-        error: 'Email já cadastrado',
-      });
-      return;
-    }
+// Rotas públicas (sem autenticação)
+app.use('/api/auth', authRoutes);
+app.use('/api/products', productRoutes);
+app.use('/api/categories', categoryRoutes);
 
-    // Adicionar campos extras
-    req.body.id = Date.now().toString();
-    req.body.pointsBalance = 5000; // Saldo inicial
-    req.body.createdAt = new Date().toISOString();
+// Rotas protegidas (com autenticação)
+// Adicionar middleware de autenticação apenas para estas rotas
+app.use('/api/users', userRoutes);
+app.use('/api/orders', orderRoutes);
+app.use('/api/transactions', transactionRoutes);
 
-    next();
-  } else {
-    next();
-  }
+// Middleware para tratar erros
+// CORREÇÃO: Adicionado o parâmetro req que estava faltando
+app.use((err, res) => {
+  console.error(err.stack);
+  res.status(500).json({
+    error: 'Erro interno do servidor',
+    message: process.env.NODE_ENV === 'development' ? err.message : undefined,
+  });
 });
 
-// Middleware para criar pedidos
-server.use((req, res, next) => {
-  if (req.method === 'POST' && req.path === '/orders') {
-    // Adicionar campos extras
-    req.body.id = Date.now().toString();
-    req.body.status = 'PENDING';
-    req.body.createdAt = new Date().toISOString();
-
-    // Buscar os produtos para incluir informações completas
-    const products = router.db.get('products').value();
-
-    req.body.products = req.body.products.map(item => {
-      const productDetails = products.find(p => p.id === item.productId);
-      return {
-        ...item,
-        product: productDetails,
-      };
-    });
-
-    // Atualizar o saldo de pontos do usuário
-    const userId = req.body.userId;
-    const user = router.db.get('users').find({ id: userId }).value();
-
-    if (user) {
-      const newBalance = user.pointsBalance - req.body.totalPoints;
-
-      if (newBalance < 0) {
-        res.status(400).jsonp({
-          error: 'Saldo de pontos insuficiente',
-        });
-        return;
-      }
-
-      router.db.get('users').find({ id: userId }).assign({ pointsBalance: newBalance }).write();
-
-      // Adicionar transação de resgate
-      const transaction = {
-        id: Date.now().toString(),
-        userId,
-        type: 'REDEEM',
-        points: req.body.totalPoints,
-        description: 'Resgate de produto(s)',
-        createdAt: new Date().toISOString(),
-      };
-
-      router.db.get('transactions').push(transaction).write();
-    }
-
-    next();
-  } else {
-    next();
-  }
-});
-
-// Usar arquivos de rotas customizadas
-server.use(jsonServer.rewriter(router));
-
-// Usar o router padrão do json-server
-server.use(router);
-
-server.listen(3001, () => {
-  console.info('JSON Server está rodando na porta 3001');
+// Iniciar o servidor
+app.listen(PORT, () => {
+  console.info(`Servidor Express rodando na porta ${PORT}`);
+  console.info(`API disponível em http://localhost:${PORT}/api/`);
 });

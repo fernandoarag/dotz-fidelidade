@@ -1,0 +1,1033 @@
+{
+  "users": [
+    {
+      "id": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "name": "João Silva",
+      "email": "joao@example.com",
+      "password": "senha123",
+      "phone": "(11) 98765-4321",
+      "pointsBalance": 11250,
+      "createdAt": "2023-09-15T14:30:00Z"
+    },
+    {
+      "id": "b2c3d4e5-f6a7-5b2c-9b2c-2b3c4d5e6f7a",
+      "name": "Maria Oliveira",
+      "email": "maria@example.com",
+      "password": "maria2024",
+      "phone": "(11) 91234-5678",
+      "pointsBalance": 8320,
+      "createdAt": "2023-10-20T10:45:00Z"
+    },
+    {
+      "id": "c3d4e5f6-a7b8-6c3d-0c3d-3c4d5e6f7a8b",
+      "name": "Carlos Santos",
+      "email": "carlos@example.com",
+      "password": "carlos1234",
+      "phone": "(21) 99876-5432",
+      "pointsBalance": 23450,
+      "createdAt": "2023-11-05T09:15:00Z"
+    },
+    {
+      "id": "d4e5f6a7-b8c9-7d4e-1d4e-4d5e6f7a8b9c",
+      "name": "Ana Pereira",
+      "email": "ana@example.com",
+      "password": "ana4321",
+      "phone": "(31) 98765-1234",
+      "pointsBalance": 5680,
+      "createdAt": "2023-12-10T16:20:00Z"
+    },
+    {
+      "id": "e5f6a7b8-c9d0-8e5f-2e5f-5e6f7a8b9c0d",
+      "name": "Pedro Costa",
+      "email": "pedro@example.com",
+      "password": "pedro9876",
+      "phone": "(41) 99632-8521",
+      "pointsBalance": 32100,
+      "createdAt": "2024-01-08T11:30:00Z"
+    },
+    {
+      "id": "f6a7b8c9-d0e1-9f6a-3f6a-6f7a8b9c0d1e",
+      "name": "Julia Mendes",
+      "email": "julia@example.com",
+      "password": "julia555",
+      "phone": "(21) 98888-7777",
+      "pointsBalance": 12450,
+      "createdAt": "2023-12-12T08:15:00Z"
+    },
+    {
+      "id": "a7b8c9d0-e1f2-0a7b-4a7b-7a8b9c0d1e2f",
+      "name": "Ricardo Almeida",
+      "email": "ricardo@example.com",
+      "password": "ricardo123",
+      "phone": "(11) 97777-6666",
+      "pointsBalance": 18900,
+      "createdAt": "2023-11-18T14:20:00Z"
+    },
+    {
+      "id": "b8c9d0e1-f2a3-1b8c-5b8c-8b9c0d1e2f3a",
+      "name": "Camila Ferreira",
+      "email": "camila@example.com",
+      "password": "cam2024",
+      "phone": "(31) 96666-5555",
+      "pointsBalance": 7800,
+      "createdAt": "2024-01-05T09:45:00Z"
+    },
+    {
+      "id": "c9d0e1f2-a3b4-2c9d-6c9d-9c0d1e2f3a4b",
+      "name": "Fernando Gomes",
+      "email": "fernando@example.com",
+      "password": "fer3456",
+      "phone": "(41) 95555-4444",
+      "pointsBalance": 25600,
+      "createdAt": "2023-10-30T13:10:00Z"
+    },
+    {
+      "id": "d0e1f2a3-b4c5-3d0e-7d0e-0d1e2f3a4b5c",
+      "name": "Laura Dias",
+      "email": "laura@example.com",
+      "password": "laura789",
+      "phone": "(11) 94444-3333",
+      "pointsBalance": 9300,
+      "createdAt": "2023-12-22T10:30:00Z"
+    }
+  ],
+  "addresses": [
+    {
+      "id": "addr-001",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "street": "Rua das Flores",
+      "number": "123",
+      "complement": "Apto 45",
+      "neighborhood": "Jardim Primavera",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01234-567",
+      "isDefault": true
+    },
+    {
+      "id": "addr-002",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "street": "Avenida Paulista",
+      "number": "1000",
+      "complement": "Sala 510",
+      "neighborhood": "Bela Vista",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01310-200",
+      "isDefault": false
+    },
+    {
+      "id": "addr-003",
+      "userId": "b2c3d4e5-f6a7-5b2c-9b2c-2b3c4d5e6f7a",
+      "street": "Rua Augusta",
+      "number": "789",
+      "complement": "Bloco B",
+      "neighborhood": "Consolação",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01305-000",
+      "isDefault": true
+    },
+    {
+      "id": "addr-004",
+      "userId": "b2c3d4e5-f6a7-5b2c-9b2c-2b3c4d5e6f7a",
+      "street": "Alameda Santos",
+      "number": "456",
+      "complement": "",
+      "neighborhood": "Cerqueira César",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01419-000",
+      "isDefault": false
+    },
+    {
+      "id": "addr-005",
+      "userId": "c3d4e5f6-a7b8-6c3d-0c3d-3c4d5e6f7a8b",
+      "street": "Avenida Atlântica",
+      "number": "1234",
+      "complement": "Apto 1001",
+      "neighborhood": "Copacabana",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "zipCode": "22010-000",
+      "isDefault": true
+    },
+    {
+      "id": "addr-006",
+      "userId": "d4e5f6a7-b8c9-7d4e-1d4e-4d5e6f7a8b9c",
+      "street": "Rua dos Inconfidentes",
+      "number": "450",
+      "complement": "Casa 2",
+      "neighborhood": "Savassi",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "zipCode": "30140-120",
+      "isDefault": true
+    },
+    {
+      "id": "addr-007",
+      "userId": "e5f6a7b8-c9d0-8e5f-2e5f-5e6f7a8b9c0d",
+      "street": "Alameda Dr. Carlos de Carvalho",
+      "number": "555",
+      "complement": "Apto 303",
+      "neighborhood": "Centro",
+      "city": "Curitiba",
+      "state": "PR",
+      "zipCode": "80410-180",
+      "isDefault": true
+    },
+    {
+      "id": "addr-008",
+      "userId": "e5f6a7b8-c9d0-8e5f-2e5f-5e6f7a8b9c0d",
+      "street": "Rua Vicente Machado",
+      "number": "320",
+      "complement": "Sala 401",
+      "neighborhood": "Batel",
+      "city": "Curitiba",
+      "state": "PR",
+      "zipCode": "80420-010",
+      "isDefault": false
+    },
+    {
+      "id": "addr-009",
+      "userId": "f6a7b8c9-d0e1-9f6a-3f6a-6f7a8b9c0d1e",
+      "street": "Avenida Rio Branco",
+      "number": "156",
+      "complement": "Sala 2501",
+      "neighborhood": "Centro",
+      "city": "Rio de Janeiro",
+      "state": "RJ",
+      "zipCode": "20040-901",
+      "isDefault": true
+    },
+    {
+      "id": "addr-010",
+      "userId": "a7b8c9d0-e1f2-0a7b-4a7b-7a8b9c0d1e2f",
+      "street": "Avenida Brigadeiro Faria Lima",
+      "number": "3477",
+      "complement": "Torre Norte, Andar 14",
+      "neighborhood": "Itaim Bibi",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "04538-133",
+      "isDefault": true
+    },
+    {
+      "id": "addr-011",
+      "userId": "b8c9d0e1-f2a3-1b8c-5b8c-8b9c0d1e2f3a",
+      "street": "Avenida do Contorno",
+      "number": "5432",
+      "complement": "Loja 101",
+      "neighborhood": "Funcionários",
+      "city": "Belo Horizonte",
+      "state": "MG",
+      "zipCode": "30110-017",
+      "isDefault": true
+    },
+    {
+      "id": "addr-012",
+      "userId": "c9d0e1f2-a3b4-2c9d-6c9d-9c0d1e2f3a4b",
+      "street": "Rua Padre Chagas",
+      "number": "342",
+      "complement": "",
+      "neighborhood": "Moinhos de Vento",
+      "city": "Porto Alegre",
+      "state": "RS",
+      "zipCode": "90570-080",
+      "isDefault": true
+    },
+    {
+      "id": "addr-013",
+      "userId": "d0e1f2a3-b4c5-3d0e-7d0e-0d1e2f3a4b5c",
+      "street": "Alameda Campinas",
+      "number": "579",
+      "complement": "Apto 52",
+      "neighborhood": "Jardim Paulista",
+      "city": "São Paulo",
+      "state": "SP",
+      "zipCode": "01404-100",
+      "isDefault": true
+    }
+  ],
+  "transactions": [
+    {
+      "id": "trans-001",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "type": "EARN",
+      "points": 500,
+      "description": "Compra no Supermercado XYZ",
+      "createdAt": "2023-12-10T10:15:00Z"
+    },
+    {
+      "id": "trans-002",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "type": "EARN",
+      "points": 750,
+      "description": "Pagamento de fatura do cartão",
+      "createdAt": "2023-12-15T14:30:00Z"
+    },
+    {
+      "id": "trans-003",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "type": "REDEEM",
+      "points": 1200,
+      "description": "Resgate de fone de ouvido",
+      "createdAt": "2023-12-20T16:45:00Z"
+    },
+    {
+      "id": "trans-004",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "type": "EARN",
+      "points": 300,
+      "description": "Compra na Loja ABC",
+      "createdAt": "2023-12-25T09:00:00Z"
+    },
+    {
+      "id": "trans-005",
+      "userId": "b2c3d4e5-f6a7-5b2c-9b2c-2b3c4d5e6f7a",
+      "type": "EARN",
+      "points": 1200,
+      "description": "Compra em posto de combustível",
+      "createdAt": "2023-12-12T11:20:00Z"
+    },
+    {
+      "id": "trans-006",
+      "userId": "b2c3d4e5-f6a7-5b2c-9b2c-2b3c4d5e6f7a",
+      "type": "REDEEM",
+      "points": 3000,
+      "description": "Resgate de vale-refeição",
+      "createdAt": "2023-12-28T13:15:00Z"
+    },
+    {
+      "id": "trans-007",
+      "userId": "c3d4e5f6-a7b8-6c3d-0c3d-3c4d5e6f7a8b",
+      "type": "EARN",
+      "points": 2000,
+      "description": "Compra de passagem aérea",
+      "createdAt": "2023-12-05T08:45:00Z"
+    },
+    {
+      "id": "trans-008",
+      "userId": "c3d4e5f6-a7b8-6c3d-0c3d-3c4d5e6f7a8b",
+      "type": "EARN",
+      "points": 1500,
+      "description": "Pagamento de seguro",
+      "createdAt": "2023-12-18T15:30:00Z"
+    },
+    {
+      "id": "trans-009",
+      "userId": "d4e5f6a7-b8c9-7d4e-1d4e-4d5e6f7a8b9c",
+      "type": "EARN",
+      "points": 900,
+      "description": "Compra em farmácia",
+      "createdAt": "2023-12-08T10:00:00Z"
+    },
+    {
+      "id": "trans-010",
+      "userId": "d4e5f6a7-b8c9-7d4e-1d4e-4d5e6f7a8b9c",
+      "type": "REDEEM",
+      "points": 2500,
+      "description": "Resgate de kit viagem",
+      "createdAt": "2023-12-23T14:00:00Z"
+    },
+    {
+      "id": "trans-011",
+      "userId": "e5f6a7b8-c9d0-8e5f-2e5f-5e6f7a8b9c0d",
+      "type": "EARN",
+      "points": 1800,
+      "description": "Compra em supermercado",
+      "createdAt": "2023-12-03T09:20:00Z"
+    },
+    {
+      "id": "trans-012",
+      "userId": "e5f6a7b8-c9d0-8e5f-2e5f-5e6f7a8b9c0d",
+      "type": "EARN",
+      "points": 2200,
+      "description": "Compra de eletrodoméstico",
+      "createdAt": "2023-12-14T16:45:00Z"
+    },
+    {
+      "id": "trans-013",
+      "userId": "e5f6a7b8-c9d0-8e5f-2e5f-5e6f7a8b9c0d",
+      "type": "REDEEM",
+      "points": 5000,
+      "description": "Resgate de smartwatch",
+      "createdAt": "2023-12-26T11:30:00Z"
+    },
+    {
+      "id": "trans-014",
+      "userId": "f6a7b8c9-d0e1-9f6a-3f6a-6f7a8b9c0d1e",
+      "type": "EARN",
+      "points": 1200,
+      "description": "Pagamento de serviços",
+      "createdAt": "2023-12-05T10:15:00Z"
+    },
+    {
+      "id": "trans-015",
+      "userId": "f6a7b8c9-d0e1-9f6a-3f6a-6f7a8b9c0d1e",
+      "type": "REDEEM",
+      "points": 3500,
+      "description": "Resgate de sessão de massagem",
+      "createdAt": "2023-12-19T14:20:00Z"
+    },
+    {
+      "id": "trans-016",
+      "userId": "a7b8c9d0-e1f2-0a7b-4a7b-7a8b9c0d1e2f",
+      "type": "EARN",
+      "points": 1600,
+      "description": "Compra de combustível",
+      "createdAt": "2023-12-07T08:30:00Z"
+    },
+    {
+      "id": "trans-017",
+      "userId": "a7b8c9d0-e1f2-0a7b-4a7b-7a8b9c0d1e2f",
+      "type": "EARN",
+      "points": 950,
+      "description": "Compra em farmácia",
+      "createdAt": "2023-12-16T11:45:00Z"
+    },
+    {
+      "id": "trans-018",
+      "userId": "b8c9d0e1-f2a3-1b8c-5b8c-8b9c0d1e2f3a",
+      "type": "EARN",
+      "points": 800,
+      "description": "Compra em livraria",
+      "createdAt": "2023-12-09T15:20:00Z"
+    },
+    {
+      "id": "trans-019",
+      "userId": "b8c9d0e1-f2a3-1b8c-5b8c-8b9c0d1e2f3a",
+      "type": "REDEEM",
+      "points": 1900,
+      "description": "Resgate de luminária LED",
+      "createdAt": "2023-12-21T13:10:00Z"
+    },
+    {
+      "id": "trans-020",
+      "userId": "c9d0e1f2-a3b4-2c9d-6c9d-9c0d1e2f3a4b",
+      "type": "EARN",
+      "points": 1700,
+      "description": "Pagamento de conta de energia",
+      "createdAt": "2023-12-04T09:40:00Z"
+    },
+    {
+      "id": "trans-021",
+      "userId": "c9d0e1f2-a3b4-2c9d-6c9d-9c0d1e2f3a4b",
+      "type": "EARN",
+      "points": 1300,
+      "description": "Compra em shopping",
+      "createdAt": "2023-12-17T16:30:00Z"
+    },
+    {
+      "id": "trans-022",
+      "userId": "d0e1f2a3-b4c5-3d0e-7d0e-0d1e2f3a4b5c",
+      "type": "EARN",
+      "points": 1100,
+      "description": "Compra em supermercado",
+      "createdAt": "2023-12-08T12:15:00Z"
+    },
+    {
+      "id": "trans-023",
+      "userId": "d0e1f2a3-b4c5-3d0e-7d0e-0d1e2f3a4b5c",
+      "type": "REDEEM",
+      "points": 2800,
+      "description": "Resgate de conjunto de toalhas",
+      "createdAt": "2023-12-22T10:45:00Z"
+    },
+    {
+      "id": "f640d6de-744a-43cc-bc13-d93cd4711bc1",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "type": "REDEEM",
+      "points": 4500,
+      "description": "Resgate de produto(s)",
+      "createdAt": "2025-03-30T05:02:45.325Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "cat-001",
+      "name": "Eletrônicos",
+      "description": "Produtos eletrônicos e gadgets",
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336378_1280.jpg"
+    },
+    {
+      "id": "cat-002",
+      "name": "Casa e Decoração",
+      "description": "Produtos para sua casa",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/08/27/10/16/interior-2685521_1280.jpg"
+    },
+    {
+      "id": "cat-003",
+      "name": "Viagens",
+      "description": "Pacotes de viagem e experiências",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/01/09/18/27/journey-1130732_1280.jpg"
+    },
+    {
+      "id": "cat-004",
+      "name": "Entretenimento",
+      "description": "Ingressos, assinaturas e diversão",
+      "imageUrl": "https://cdn.pixabay.com/photo/2018/06/27/07/45/college-student-3500990_1280.jpg"
+    },
+    {
+      "id": "cat-005",
+      "name": "Gastronomia",
+      "description": "Restaurantes, deliveries e produtos gourmet",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/01/26/02/06/platter-2009590_1280.jpg"
+    },
+    {
+      "id": "cat-006",
+      "name": "Bem-Estar",
+      "description": "Produtos e serviços para saúde e bem-estar",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/18/15/03/woman-1835046_1280.jpg"
+    },
+    {
+      "id": "cat-007",
+      "name": "Moda",
+      "description": "Roupas, calçados e acessórios",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/08/01/11/48/woman-2564660_1280.jpg"
+    },
+    {
+      "id": "cat-008",
+      "name": "Tecnologia",
+      "description": "Produtos e serviços de tecnologia",
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/06/24/15/45/ipad-820272_1280.jpg"
+    },
+    {
+      "id": "cat-009",
+      "name": "Esporte e Lazer",
+      "description": "Produtos para prática esportiva e lazer",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/08/06/12/52/people-2592247_1280.jpg"
+    },
+    {
+      "id": "cat-010",
+      "name": "Educação",
+      "description": "Cursos, livros e material educativo",
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_1280.jpg"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-001",
+      "name": "Fone de Ouvido Bluetooth",
+      "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de longa duração.",
+      "pointsPrice": 4500,
+      "categoryId": "cat-001",
+      "imageUrl": "https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-002",
+      "name": "Smartwatch",
+      "description": "Relógio inteligente com monitor cardíaco, GPS e diversas funcionalidades.",
+      "pointsPrice": 7800,
+      "categoryId": "cat-001",
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/06/25/17/21/smart-watch-821557_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-003",
+      "name": "Carregador Sem Fio",
+      "description": "Carregador wireless de 15W para smartphones compatíveis.",
+      "pointsPrice": 2200,
+      "categoryId": "cat-001",
+      "imageUrl": "https://cdn.pixabay.com/photo/2019/07/24/13/03/wireless-charging-4360096_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-004",
+      "name": "Caixa de Som Bluetooth",
+      "description": "Caixa de som portátil resistente à água com 20W de potência.",
+      "pointsPrice": 3800,
+      "categoryId": "cat-001",
+      "imageUrl": "https://cdn.pixabay.com/photo/2020/04/29/10/18/google-pixabay-5108747_1280.jpg",
+      "available": false
+    },
+    {
+      "id": "prod-005",
+      "name": "Tablet 10 polegadas",
+      "description": "Tablet com tela de 10 polegadas, processador octa-core e 64GB de armazenamento.",
+      "pointsPrice": 9500,
+      "categoryId": "cat-001",
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/02/05/08/12/ipad-624707_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-006",
+      "name": "Jogo de Panelas Antiaderentes",
+      "description": "Conjunto de panelas antiaderentes de alta qualidade para sua cozinha.",
+      "pointsPrice": 6500,
+      "categoryId": "cat-002",
+      "imageUrl": "https://cdn.pixabay.com/photo/2019/06/20/15/42/pots-4287581_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-007",
+      "name": "Conjunto de Toalhas",
+      "description": "Kit com 4 toalhas de banho e 4 toalhas de rosto de algodão egípcio.",
+      "pointsPrice": 2800,
+      "categoryId": "cat-002",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/01/14/towels-1866775_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-008",
+      "name": "Luminária de Mesa LED",
+      "description": "Luminária moderna com controle de intensidade e temperatura da luz.",
+      "pointsPrice": 1900,
+      "categoryId": "cat-002",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/08/11/01/05/light-2629451_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-009",
+      "name": "Jogo de Cama King",
+      "description": "Jogo de cama king size 300 fios, 100% algodão.",
+      "pointsPrice": 3900,
+      "categoryId": "cat-002",
+      "imageUrl": "https://cdn.pixabay.com/photo/2015/03/28/10/23/bedroom-696046_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-010",
+      "name": "Passagem Aérea Nacional",
+      "description": "Passagem aérea de ida e volta para destinos nacionais.",
+      "pointsPrice": 12000,
+      "categoryId": "cat-003",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/06/05/11/01/airport-2373727_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-011",
+      "name": "Diária em Resort",
+      "description": "Uma diária para casal em resort all-inclusive.",
+      "pointsPrice": 15000,
+      "categoryId": "cat-003",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/18/22/21/architecture-1837150_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-012",
+      "name": "Kit Viagem",
+      "description": "Kit com travesseiro de pescoço, máscara de dormir e protetores auriculares.",
+      "pointsPrice": 2500,
+      "categoryId": "cat-003",
+      "imageUrl": "https://cdn.pixabay.com/photo/2019/07/09/11/52/travel-4326672_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-013",
+      "name": "Pacote de Viagem para Praias do Nordeste",
+      "description": "Pacote de 5 dias para casal com hospedagem e transfer.",
+      "pointsPrice": 25000,
+      "categoryId": "cat-003",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/14/22/18/beach-1824855_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-014",
+      "name": "Assinatura de Streaming",
+      "description": "Um ano de assinatura em plataforma de streaming de vídeo.",
+      "pointsPrice": 4000,
+      "categoryId": "cat-004",
+      "imageUrl": "https://cdn.pixabay.com/photo/2020/04/25/10/15/tv-5090374_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-015",
+      "name": "Ingresso para Cinema",
+      "description": "Par de ingressos para qualquer filme em cartaz.",
+      "pointsPrice": 1500,
+      "categoryId": "cat-004",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/11/24/10/43/ticket-2974645_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-016",
+      "name": "Assinatura de Plataforma de Jogos",
+      "description": "Assinatura de 6 meses para plataforma de jogos online.",
+      "pointsPrice": 5000,
+      "categoryId": "cat-004",
+      "imageUrl": "https://cdn.pixabay.com/photo/2021/09/07/07/11/game-console-6603120_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-017",
+      "name": "Vale-Refeição",
+      "description": "Vale-refeição no valor de R$ 100 para usar em restaurantes parceiros.",
+      "pointsPrice": 3000,
+      "categoryId": "cat-005",
+      "imageUrl": "https://cdn.pixabay.com/photo/2018/06/01/20/25/restaurant-3447052_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-018",
+      "name": "Cafeteira Elétrica",
+      "description": "Cafeteira programável com filtro permanente e jarra térmica.",
+      "pointsPrice": 4500,
+      "categoryId": "cat-005",
+      "imageUrl": "https://cdn.pixabay.com/photo/2018/05/04/00/34/coffee-3373921_1280.jpg",
+      "available": false
+    },
+    {
+      "id": "prod-019",
+      "name": "Cesta Gourmet",
+      "description": "Cesta com produtos gourmet importados, incluindo queijos, vinhos e chocolates.",
+      "pointsPrice": 7000,
+      "categoryId": "cat-005",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/03/05/19/02/cheese-1238395_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-020",
+      "name": "Sessão de Massagem",
+      "description": "Sessão de massagem relaxante de 60 minutos.",
+      "pointsPrice": 3500,
+      "categoryId": "cat-006",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/18/15/32/woman-1835046_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-021",
+      "name": "Kit Aromaterapia",
+      "description": "Kit com difusor e óleos essenciais para aromaterapia.",
+      "pointsPrice": 2800,
+      "categoryId": "cat-006",
+      "imageUrl": "https://cdn.pixabay.com/photo/2018/04/07/15/04/spa-3298820_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-022",
+      "name": "Smartband Fitness",
+      "description": "Pulseira inteligente para monitoramento de atividades físicas e sono.",
+      "pointsPrice": 3200,
+      "categoryId": "cat-006",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/05/27/08/33/watch-1419437_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-023",
+      "name": "Vale-Compras em Loja de Roupas",
+      "description": "Vale-compras no valor de R$ 150 para usar em lojas parceiras.",
+      "pointsPrice": 4500,
+      "categoryId": "cat-007",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/03/27/19/57/fashion-1284050_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-024",
+      "name": "Relógio de Pulso",
+      "description": "Relógio de pulso casual, resistente à água.",
+      "pointsPrice": 5000,
+      "categoryId": "cat-007",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/03/20/15/13/wrist-watch-2159785_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-025",
+      "name": "Óculos de Sol",
+      "description": "Óculos de sol com proteção UV e design moderno.",
+      "pointsPrice": 3800,
+      "categoryId": "cat-007",
+      "imageUrl": "https://cdn.pixabay.com/photo/2017/08/06/11/11/sunglasses-2591965_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-026",
+      "name": "Notebook",
+      "description": "Notebook com processador de última geração, 16GB RAM e SSD de 512GB.",
+      "pointsPrice": 35000,
+      "categoryId": "cat-008",
+      "imageUrl": "https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-027",
+      "name": "Monitor Ultrawide",
+      "description": "Monitor ultrawide de 34 polegadas com resolução 4K.",
+      "pointsPrice": 18000,
+      "categoryId": "cat-008",
+      "imageUrl": "https://cdn.pixabay.com/photo/2020/04/08/14/58/monitor-5017292_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-028",
+      "name": "Teclado Mecânico",
+      "description": "Teclado mecânico com iluminação RGB e switches Cherry MX.",
+      "pointsPrice": 5500,
+      "categoryId": "cat-008",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/03/27/19/43/keyboard-1283929_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-029",
+      "name": "Kit para Yoga",
+      "description": "Kit completo para prática de yoga com tapete, blocos e faixas.",
+      "pointsPrice": 2700,
+      "categoryId": "cat-009",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/19/12/21/alone-1839076_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-030",
+      "name": "Bicicleta Ergométrica",
+      "description": "Bicicleta ergométrica com 8 níveis de resistência e monitor cardíaco.",
+      "pointsPrice": 12000,
+      "categoryId": "cat-009",
+      "imageUrl": "https://cdn.pixabay.com/photo/2019/04/28/15/13/stationary-bike-4163876_1280.jpg",
+      "available": false
+    },
+    {
+      "id": "prod-031",
+      "name": "Raquete de Tênis",
+      "description": "Raquete de tênis profissional com bolsa de transporte.",
+      "pointsPrice": 6000,
+      "categoryId": "cat-009",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/04/13/08/22/ball-1326172_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-032",
+      "name": "Curso de Idiomas Online",
+      "description": "Assinatura anual para plataforma de ensino de idiomas.",
+      "pointsPrice": 8000,
+      "categoryId": "cat-010",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/19/14/16/books-1839251_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-033",
+      "name": "Kit de Livros",
+      "description": "Kit com 5 livros bestsellers de ficção ou não-ficção.",
+      "pointsPrice": 4200,
+      "categoryId": "cat-010",
+      "imageUrl": "https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581_1280.jpg",
+      "available": true
+    },
+    {
+      "id": "prod-034",
+      "name": "Curso de Fotografia",
+      "description": "Curso online de fotografia com certificado.",
+      "pointsPrice": 3800,
+      "categoryId": "cat-010",
+      "imageUrl": "https://cdn.pixabay.com/photo/2014/10/30/17/32/camera-509595_1280.jpg",
+      "available": true
+    }
+  ],
+  "orders": [
+    {
+      "id": "order-001",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "products": [
+        {
+          "productId": "prod-001",
+          "quantity": 1,
+          "pointsPrice": 4500,
+          "product": {
+            "id": "prod-001",
+            "name": "Fone de Ouvido Bluetooth",
+            "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de longa duração.",
+            "pointsPrice": 4500,
+            "categoryId": "cat-001",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?headphones",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 4500,
+      "status": "DELIVERED",
+      "addressId": "addr-001",
+      "createdAt": "2023-11-20T16:45:00Z"
+    },
+    {
+      "id": "order-002",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "products": [
+        {
+          "productId": "prod-012",
+          "quantity": 1,
+          "pointsPrice": 2500,
+          "product": {
+            "id": "prod-012",
+            "name": "Kit Viagem",
+            "description": "Kit com travesseiro de pescoço, máscara de dormir e protetores auriculares.",
+            "pointsPrice": 2500,
+            "categoryId": "cat-003",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?travel-kit",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 2500,
+      "status": "SHIPPED",
+      "addressId": "addr-001",
+      "createdAt": "2023-12-15T10:30:00Z"
+    },
+    {
+      "id": "order-003",
+      "userId": "b2c3d4e5-f6a7-5b2c-9b2c-2b3c4d5e6f7a",
+      "products": [
+        {
+          "productId": "prod-017",
+          "quantity": 1,
+          "pointsPrice": 3000,
+          "product": {
+            "id": "prod-017",
+            "name": "Vale-Refeição",
+            "description": "Vale-refeição no valor de R$ 100 para usar em restaurantes parceiros.",
+            "pointsPrice": 3000,
+            "categoryId": "cat-005",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?restaurant",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 3000,
+      "status": "DELIVERED",
+      "addressId": "addr-003",
+      "createdAt": "2023-12-05T14:15:00Z"
+    },
+    {
+      "id": "order-004",
+      "userId": "c3d4e5f6-a7b8-6c3d-0c3d-3c4d5e6f7a8b",
+      "products": [
+        {
+          "productId": "prod-002",
+          "quantity": 1,
+          "pointsPrice": 7800,
+          "product": {
+            "id": "prod-002",
+            "name": "Smartwatch",
+            "description": "Relógio inteligente com monitor cardíaco, GPS e diversas funcionalidades.",
+            "pointsPrice": 7800,
+            "categoryId": "cat-001",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?smartwatch",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 7800,
+      "status": "PROCESSING",
+      "addressId": "addr-005",
+      "createdAt": "2024-01-05T09:20:00Z"
+    },
+    {
+      "id": "order-005",
+      "userId": "d4e5f6a7-b8c9-7d4e-1d4e-4d5e6f7a8b9c",
+      "products": [
+        {
+          "productId": "prod-012",
+          "quantity": 1,
+          "pointsPrice": 2500,
+          "product": {
+            "id": "prod-012",
+            "name": "Kit Viagem",
+            "description": "Kit com travesseiro de pescoço, máscara de dormir e protetores auriculares.",
+            "pointsPrice": 2500,
+            "categoryId": "cat-003",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?travel-kit",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 2500,
+      "status": "DELIVERED",
+      "addressId": "addr-006",
+      "createdAt": "2023-12-10T16:30:00Z"
+    },
+    {
+      "id": "order-006",
+      "userId": "e5f6a7b8-c9d0-8e5f-2e5f-5e6f7a8b9c0d",
+      "products": [
+        {
+          "productId": "prod-002",
+          "quantity": 1,
+          "pointsPrice": 7800,
+          "product": {
+            "id": "prod-002",
+            "name": "Smartwatch",
+            "description": "Relógio inteligente com monitor cardíaco, GPS e diversas funcionalidades.",
+            "pointsPrice": 7800,
+            "categoryId": "cat-001",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?smartwatch",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 7800,
+      "status": "DELIVERED",
+      "addressId": "addr-007",
+      "createdAt": "2023-11-25T11:45:00Z"
+    },
+    {
+      "id": "order-007",
+      "userId": "f6a7b8c9-d0e1-9f6a-3f6a-6f7a8b9c0d1e",
+      "products": [
+        {
+          "productId": "prod-020",
+          "quantity": 1,
+          "pointsPrice": 3500,
+          "product": {
+            "id": "prod-020",
+            "name": "Sessão de Massagem",
+            "description": "Sessão de massagem relaxante de 60 minutos.",
+            "pointsPrice": 3500,
+            "categoryId": "cat-006",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?massage",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 3500,
+      "status": "DELIVERED",
+      "addressId": "addr-009",
+      "createdAt": "2023-12-15T13:20:00Z"
+    },
+    {
+      "id": "order-008",
+      "userId": "b8c9d0e1-f2a3-1b8c-5b8c-8b9c0d1e2f3a",
+      "products": [
+        {
+          "productId": "prod-008",
+          "quantity": 1,
+          "pointsPrice": 1900,
+          "product": {
+            "id": "prod-008",
+            "name": "Luminária de Mesa LED",
+            "description": "Luminária moderna com controle de intensidade e temperatura da luz.",
+            "pointsPrice": 1900,
+            "categoryId": "cat-002",
+            "imageUrl": "https://source.unsplash.com/random/400x300/?desk-lamp",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 1900,
+      "status": "SHIPPED",
+      "addressId": "addr-011",
+      "createdAt": "2023-12-20T15:10:00Z"
+    },
+    {
+      "id": "de9af2bb-e19a-42d0-9901-d824b70c8e97",
+      "userId": "a1b2c3d4-e5f6-4a1b-8a1b-1a2b3c4d5e6f",
+      "products": [
+        {
+          "productId": "prod-001",
+          "quantity": 1,
+          "pointsPrice": 4500,
+          "product": {
+            "id": "prod-001",
+            "name": "Fone de Ouvido Bluetooth",
+            "description": "Fone de ouvido sem fio com cancelamento de ruído e bateria de longa duração.",
+            "pointsPrice": 4500,
+            "imageUrl": "https://cdn.pixabay.com/photo/2018/09/17/14/27/headphones-3683983_1280.jpg",
+            "available": true
+          }
+        }
+      ],
+      "totalPoints": 4500,
+      "status": "PENDING",
+      "addressId": "addr-001",
+      "createdAt": "2025-03-30T05:02:45.325Z"
+    }
+  ]
+}

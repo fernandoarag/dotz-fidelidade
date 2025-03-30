@@ -1,15 +1,15 @@
-import { DefaultLayout } from "@components/layout/DefaultLayout/DefaultLayout";
+import { DefaultLayout } from "@components/layout/DefaultLayout";
 import { useAuth } from "@contexts/AuthContext";
 import { AddressForm } from "@pages/AddressForm";
-import { AddressList } from "@pages/AddressList/AddressList";
-import { Dashboard } from "@pages/Dashboard/Dashboard";
-import { Login } from "@pages/Login/Login";
-import { OrderDetails } from "@pages/OrderDetails/OrderDetails";
-import { OrderList } from "@pages/OrderList/OrderList";
-import { ProductDetails } from "@pages/ProductDetails/ProductDetails";
-import { ProductList } from "@pages/ProductList/ProductList";
-// import { Profile } from "@pages/Profile/Profile";
-import { Register } from "@pages/Register/Register";
+import { AddressList } from "@pages/AddressList";
+import { Dashboard } from "@pages/Dashboard";
+import { Login } from "@pages/Login";
+import { OrderDetails } from "@pages/OrderDetails";
+import { OrderList } from "@pages/OrderList";
+import { ProductDetails } from "@pages/ProductDetails";
+import { ProductList } from "@pages/ProductList";
+import { Profile } from "@pages/Profile";
+import { Register } from "@pages/Register";
 import type React from "react";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 
@@ -48,7 +48,7 @@ export const AppRoutes: React.FC = () => {
           }
         >
           <Route index element={<Dashboard />} />
-          {/* <Route path="profile" element={<Profile />} /> */}
+          <Route path="profile" element={<Profile />} />
           <Route path="addresses" element={<AddressList />} />
           <Route path="addresses/new" element={<AddressForm />} />
           <Route path="addresses/edit/:id" element={<AddressForm />} />

@@ -1,6 +1,6 @@
 import { CreateOrderUseCase } from "@application/useCases/order/CreateOrderUseCase";
-import { Button } from "@components/common/Button/Button";
-import { Flex } from "@components/common/Flex/Flex";
+import { Button } from "@components/common/Button";
+import { Flex } from "@components/common/Flex";
 import { useAuth } from "@contexts/AuthContext";
 import { useProductDetails } from "@hooks/useProductDetails";
 import { OrderRepository } from "@infrastructure/repositories/OrderRepository";

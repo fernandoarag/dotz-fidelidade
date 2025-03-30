@@ -30,7 +30,7 @@
     "indentStyle": "space",
     "indentWidth": 2,
     "lineWidth": 100,
-    "ignore": ["node_modules", "build", "dist", "*.md", "server/**"]
+    "ignore": ["node_modules", "build", "dist", "*.md"]
   },
   "javascript": {
     "formatter": {

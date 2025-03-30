@@ -1,7 +1,7 @@
 import { theme } from "@/presentation/theme/theme";
-import { Button } from "@components/common/Button/Button";
-import { Flex } from "@components/common/Flex/Flex";
-import { Input } from "@components/common/Input/Input";
+import { Button } from "@components/common/Button";
+import { Flex } from "@components/common/Flex";
+import { Input } from "@components/common/Input";
 import type { Category } from "@core/domain/entities/Category";
 import type React from "react";
 import { useState } from "react";

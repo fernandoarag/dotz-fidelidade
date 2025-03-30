@@ -1,5 +1,5 @@
-import { Button } from "@components/common/Button/Button";
-import { OrderStatusBadge } from "@components/features/OrderStatusBadge/OrderStatusBadge";
+import { Button } from "@components/common/Button";
+import { OrderStatusBadge } from "@components/features/OrderStatusBadge";
 import { useOrders } from "@hooks/useOrders";
 import type React from "react";
 import { Link } from "react-router-dom";

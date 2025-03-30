@@ -1,4 +1,4 @@
-import { Button } from "@components/common/Button/Button";
+import { Button } from "@components/common/Button";
 import type { Product } from "@core/domain/entities/Product";
 import type React from "react";
 import { Link } from "react-router-dom";

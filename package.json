@@ -28,7 +28,7 @@
     "test": "craco test",
     "eject": "react-scripts eject",
     "prepare": "husky",
-    "start:api": "node --watch server/express-server.js",
+    "start:api": "node --watch server/server.js",
     "start:dev": "concurrently \"npm run start\" \"npm run start:api\"",
     "lint": "biome lint ./src",
     "lint:fix": "eslint --ext .js,.jsx,.ts,.tsx src --fix",
@@ -36,22 +36,11 @@
     "check": "biome check --apply ./src"
   },
   "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "extends": ["react-app", "react-app/jest"]
   },
   "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
   },
   "devDependencies": {
     "@biomejs/biome": "^1.9.4",

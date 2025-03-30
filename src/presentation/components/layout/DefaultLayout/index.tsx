@@ -1,6 +1,6 @@
-import { Container } from "@components/common/Container/Container";
-import { Header } from "@components/layout/Header/Header";
-import { Sidebar } from "@components/layout/Sidebar/Sidebar";
+import { Container } from "@components/common/Container";
+import { Header } from "@components/layout/Header";
+import { Sidebar } from "@components/layout/Sidebar";
 import type React from "react";
 import { Outlet } from "react-router-dom";
 import * as S from "./styles";

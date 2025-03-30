@@ -1,5 +1,5 @@
-import { Button } from "@components/common/Button/Button";
-import { Flex } from "@components/common/Flex/Flex";
+import { Button } from "@components/common/Button";
+import { Flex } from "@components/common/Flex";
 import type { Address } from "@core/domain/entities/Address";
 import { useAddresses } from "@hooks/useAddresses";
 import type React from "react";
