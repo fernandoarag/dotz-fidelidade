@@ -1,9 +1,12 @@
 import styled from 'styled-components';
 
 export const HeaderContainer = styled.header`
+  position: fixed;
   background-color: ${({ theme }) => theme.colors.white};
   box-shadow: ${({ theme }) => theme.shadows.small};
   padding: ${({ theme }) => theme.spacing.md} 0;
+  width: 100%;
+  z-index: 2;
 `;
 
 export const Logo = styled.div`

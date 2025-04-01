@@ -1,12 +1,15 @@
 import { Button } from "@components/common/Button";
-import { Container } from "@components/common/Container";
 import { Flex } from "@components/common/Flex";
 import { useAuth } from "@contexts/AuthContext";
 import type React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import * as S from "./styles";
 
-export const Header: React.FC = () => {
+interface HeaderProps {
+  children?: React.ReactNode;
+}
+
+export const Header: React.FC<HeaderProps> = ({ children }) => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
 
@@ -17,11 +20,13 @@ export const Header: React.FC = () => {
 
   return (
     <S.HeaderContainer>
-      {/* <Container> */}
       <Flex justify="space-between" align="center" padding="0 1.5rem">
-        <Link to="/">
-          <S.Logo>DOTZ</S.Logo>
-        </Link>
+        <Flex align="center">
+          {children} {/* Renderiza o botão hamburguer ou outros elementos */}
+          <Link to="/">
+            <S.Logo>DOTZ</S.Logo>
+          </Link>
+        </Flex>
         <S.Nav>
           {user && (
             <S.UserInfo>
@@ -34,7 +39,6 @@ export const Header: React.FC = () => {
           </Button>
         </S.Nav>
       </Flex>
-      {/* </Container> */}
     </S.HeaderContainer>
   );
 };

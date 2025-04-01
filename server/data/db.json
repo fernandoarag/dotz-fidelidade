@@ -530,7 +530,7 @@
       "description": "Carregador wireless de 15W para smartphones compatíveis.",
       "pointsPrice": 2200,
       "categoryId": "cat-001",
-      "imageUrl": "https://cdn.pixabay.com/photo/2019/07/24/13/03/wireless-charging-4360096_1280.jpg",
+      "imageUrl": "https://cdn.awsli.com.br/2500x2500/35/35541/produto/269339470/carregador-wireless-ultra-slim-yfh3v6ygqs-d1mxxi3snu.jpg",
       "available": true
     },
     {
@@ -539,7 +539,7 @@
       "description": "Caixa de som portátil resistente à água com 20W de potência.",
       "pointsPrice": 3800,
       "categoryId": "cat-001",
-      "imageUrl": "https://cdn.pixabay.com/photo/2020/04/29/10/18/google-pixabay-5108747_1280.jpg",
+      "imageUrl": "https://cdn.awsli.com.br/300x300/35/35541/produto/48301887/f4ba8c54df.jpg",
       "available": false
     },
     {
@@ -548,7 +548,7 @@
       "description": "Tablet com tela de 10 polegadas, processador octa-core e 64GB de armazenamento.",
       "pointsPrice": 9500,
       "categoryId": "cat-001",
-      "imageUrl": "https://cdn.pixabay.com/photo/2015/02/05/08/12/ipad-624707_1280.jpg",
+      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_919829-MLA80139885613_102024-O.webp",
       "available": true
     },
     {
@@ -557,7 +557,7 @@
       "description": "Conjunto de panelas antiaderentes de alta qualidade para sua cozinha.",
       "pointsPrice": 6500,
       "categoryId": "cat-002",
-      "imageUrl": "https://cdn.pixabay.com/photo/2019/06/20/15/42/pots-4287581_1280.jpg",
+      "imageUrl": "https://m.media-amazon.com/images/I/61gHu7UKd+L._AC_SL1200_.jpg",
       "available": true
     },
     {
@@ -566,7 +566,7 @@
       "description": "Kit com 4 toalhas de banho e 4 toalhas de rosto de algodão egípcio.",
       "pointsPrice": 2800,
       "categoryId": "cat-002",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/29/01/14/towels-1866775_1280.jpg",
+      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_823563-MLB80691846895_112024-O-kit-jogo-toalhas-banho-rosto-piso-100-algodo-luxo-hotel.webp",
       "available": true
     },
     {
@@ -575,7 +575,7 @@
       "description": "Luminária moderna com controle de intensidade e temperatura da luz.",
       "pointsPrice": 1900,
       "categoryId": "cat-002",
-      "imageUrl": "https://cdn.pixabay.com/photo/2017/08/11/01/05/light-2629451_1280.jpg",
+      "imageUrl": "https://http2.mlstatic.com/D_NQ_NP_965039-MLU72536578686_102023-O.webp",
       "available": true
     },
     {
@@ -584,7 +584,7 @@
       "description": "Jogo de cama king size 300 fios, 100% algodão.",
       "pointsPrice": 3900,
       "categoryId": "cat-002",
-      "imageUrl": "https://cdn.pixabay.com/photo/2015/03/28/10/23/bedroom-696046_1280.jpg",
+      "imageUrl": "https://lojabuettner.vtexassets.com/arquivos/ids/2176491/jogo-de-cama-230-fios-reffinata-plus-buettner-branc-preto-casal-principal.jpg?v=638343550713570000",
       "available": true
     },
     {
@@ -611,7 +611,7 @@
       "description": "Kit com travesseiro de pescoço, máscara de dormir e protetores auriculares.",
       "pointsPrice": 2500,
       "categoryId": "cat-003",
-      "imageUrl": "https://cdn.pixabay.com/photo/2019/07/09/11/52/travel-4326672_1280.jpg",
+      "imageUrl": "https://cdnspecssa.bizay.com/product/migrated/kit-com-acessorios-em-bolsa-de-poliester-mascaradormir-frente-dcmjl-b_h_f_pt-br.png?version=8785cc131b0570a7a85bca58ea620039",
       "available": true
     },
     {
@@ -629,7 +629,7 @@
       "description": "Um ano de assinatura em plataforma de streaming de vídeo.",
       "pointsPrice": 4000,
       "categoryId": "cat-004",
-      "imageUrl": "https://cdn.pixabay.com/photo/2020/04/25/10/15/tv-5090374_1280.jpg",
+      "imageUrl": "https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2021/07/30161351/Twitter-28.jpg",
       "available": true
     },
     {
@@ -652,150 +652,6 @@
     },
     {
       "id": "prod-017",
-      "name": "Vale-Refeição",
-      "description": "Vale-refeição no valor de R$ 100 para usar em restaurantes parceiros.",
-      "pointsPrice": 3000,
-      "categoryId": "cat-005",
-      "imageUrl": "https://cdn.pixabay.com/photo/2018/06/01/20/25/restaurant-3447052_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-018",
-      "name": "Cafeteira Elétrica",
-      "description": "Cafeteira programável com filtro permanente e jarra térmica.",
-      "pointsPrice": 4500,
-      "categoryId": "cat-005",
-      "imageUrl": "https://cdn.pixabay.com/photo/2018/05/04/00/34/coffee-3373921_1280.jpg",
-      "available": false
-    },
-    {
-      "id": "prod-019",
-      "name": "Cesta Gourmet",
-      "description": "Cesta com produtos gourmet importados, incluindo queijos, vinhos e chocolates.",
-      "pointsPrice": 7000,
-      "categoryId": "cat-005",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/03/05/19/02/cheese-1238395_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-020",
-      "name": "Sessão de Massagem",
-      "description": "Sessão de massagem relaxante de 60 minutos.",
-      "pointsPrice": 3500,
-      "categoryId": "cat-006",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/18/15/32/woman-1835046_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-021",
-      "name": "Kit Aromaterapia",
-      "description": "Kit com difusor e óleos essenciais para aromaterapia.",
-      "pointsPrice": 2800,
-      "categoryId": "cat-006",
-      "imageUrl": "https://cdn.pixabay.com/photo/2018/04/07/15/04/spa-3298820_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-022",
-      "name": "Smartband Fitness",
-      "description": "Pulseira inteligente para monitoramento de atividades físicas e sono.",
-      "pointsPrice": 3200,
-      "categoryId": "cat-006",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/05/27/08/33/watch-1419437_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-023",
-      "name": "Vale-Compras em Loja de Roupas",
-      "description": "Vale-compras no valor de R$ 150 para usar em lojas parceiras.",
-      "pointsPrice": 4500,
-      "categoryId": "cat-007",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/03/27/19/57/fashion-1284050_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-024",
-      "name": "Relógio de Pulso",
-      "description": "Relógio de pulso casual, resistente à água.",
-      "pointsPrice": 5000,
-      "categoryId": "cat-007",
-      "imageUrl": "https://cdn.pixabay.com/photo/2017/03/20/15/13/wrist-watch-2159785_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-025",
-      "name": "Óculos de Sol",
-      "description": "Óculos de sol com proteção UV e design moderno.",
-      "pointsPrice": 3800,
-      "categoryId": "cat-007",
-      "imageUrl": "https://cdn.pixabay.com/photo/2017/08/06/11/11/sunglasses-2591965_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-026",
-      "name": "Notebook",
-      "description": "Notebook com processador de última geração, 16GB RAM e SSD de 512GB.",
-      "pointsPrice": 35000,
-      "categoryId": "cat-008",
-      "imageUrl": "https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-027",
-      "name": "Monitor Ultrawide",
-      "description": "Monitor ultrawide de 34 polegadas com resolução 4K.",
-      "pointsPrice": 18000,
-      "categoryId": "cat-008",
-      "imageUrl": "https://cdn.pixabay.com/photo/2020/04/08/14/58/monitor-5017292_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-028",
-      "name": "Teclado Mecânico",
-      "description": "Teclado mecânico com iluminação RGB e switches Cherry MX.",
-      "pointsPrice": 5500,
-      "categoryId": "cat-008",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/03/27/19/43/keyboard-1283929_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-029",
-      "name": "Kit para Yoga",
-      "description": "Kit completo para prática de yoga com tapete, blocos e faixas.",
-      "pointsPrice": 2700,
-      "categoryId": "cat-009",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/19/12/21/alone-1839076_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-030",
-      "name": "Bicicleta Ergométrica",
-      "description": "Bicicleta ergométrica com 8 níveis de resistência e monitor cardíaco.",
-      "pointsPrice": 12000,
-      "categoryId": "cat-009",
-      "imageUrl": "https://cdn.pixabay.com/photo/2019/04/28/15/13/stationary-bike-4163876_1280.jpg",
-      "available": false
-    },
-    {
-      "id": "prod-031",
-      "name": "Raquete de Tênis",
-      "description": "Raquete de tênis profissional com bolsa de transporte.",
-      "pointsPrice": 6000,
-      "categoryId": "cat-009",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/04/13/08/22/ball-1326172_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-032",
-      "name": "Curso de Idiomas Online",
-      "description": "Assinatura anual para plataforma de ensino de idiomas.",
-      "pointsPrice": 8000,
-      "categoryId": "cat-010",
-      "imageUrl": "https://cdn.pixabay.com/photo/2016/11/19/14/16/books-1839251_1280.jpg",
-      "available": true
-    },
-    {
-      "id": "prod-033",
       "name": "Kit de Livros",
       "description": "Kit com 5 livros bestsellers de ficção ou não-ficção.",
       "pointsPrice": 4200,
@@ -804,12 +660,12 @@
       "available": true
     },
     {
-      "id": "prod-034",
+      "id": "prod-018",
       "name": "Curso de Fotografia",
       "description": "Curso online de fotografia com certificado.",
       "pointsPrice": 3800,
       "categoryId": "cat-010",
-      "imageUrl": "https://cdn.pixabay.com/photo/2014/10/30/17/32/camera-509595_1280.jpg",
+      "imageUrl": "https://www.primecursos.com.br/arquivos/uploads/2018/06/fotografia-digital.jpg",
       "available": true
     }
   ],
@@ -963,16 +819,16 @@
       "userId": "f6a7b8c9-d0e1-9f6a-3f6a-6f7a8b9c0d1e",
       "products": [
         {
-          "productId": "prod-020",
+          "productId": "prod-018",
           "quantity": 1,
-          "pointsPrice": 3500,
+          "pointsPrice": 3800,
           "product": {
-            "id": "prod-020",
-            "name": "Sessão de Massagem",
-            "description": "Sessão de massagem relaxante de 60 minutos.",
-            "pointsPrice": 3500,
-            "categoryId": "cat-006",
-            "imageUrl": "https://source.unsplash.com/random/400x300/?massage",
+            "id": "prod-018",
+            "name": "Curso de Fotografia",
+            "description": "Curso online de fotografia com certificado.",
+            "pointsPrice": 3800,
+            "categoryId": "cat-010",
+            "imageUrl": "https://www.primecursos.com.br/arquivos/uploads/2018/06/fotografia-digital.jpg",
             "available": true
           }
         }

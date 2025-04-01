@@ -12,22 +12,23 @@ Este projeto implementa um sistema de fidelidade para a DOTZ, permitindo que cli
 - **Yup**: Para validação de dados de formulários
 - **Axios**: Para requisições HTTP à API
 - **JSON Server**: Para simular a API REST
+- **Jest e React Testing Library**: Para testes unitários e de integração
 
 ## Arquitetura
 
-O projeto foi estruturado seguindo os princípios de **Clean Architecture** e **Clean Code**, organizando o código em camadas bem definidas:
+O projeto segue os princípios de **Clean Architecture** e **Clean Code**, organizando o código em camadas bem definidas:
 
-- **Core**: Contém as entidades de domínio e interfaces de repositórios
+- **Core**: Contém as entidades de domínio, interfaces e regras de negócio
 - **Application**: Implementa os casos de uso da aplicação
-- **Infrastructure**: Contém as implementações concretas dos repositórios e serviços
-- **Presentation**: Responsável pela interface do usuário, incluindo componentes React, páginas e hooks
+- **Infrastructure**: Contém as implementações concretas de repositórios, serviços e integração com APIs
+- **Presentation**: Responsável pela interface do usuário, incluindo componentes React, páginas, hooks e contextos
 
-Esta estrutura proporciona maior modularidade, testabilidade e manutenibilidade ao código.
+Esta estrutura modular facilita a manutenção, escalabilidade e testabilidade do código.
 
 ## Funcionalidades
 
 - **Cadastro de usuário**: Registro com validação de dados
-- **Autenticação**: Login com armazenamento de token JWT
+- **Autenticação**: Login com armazenamento de token JWT (Implementaria em produção)
 - **Dashboard**: Visualização de saldo de pontos e últimas transações
 - **Gerenciamento de endereços**: Cadastro, edição e exclusão de endereços de entrega
 - **Catálogo de produtos**: Listagem com filtros por categoria, preço e busca textual
@@ -39,7 +40,7 @@ Esta estrutura proporciona maior modularidade, testabilidade e manutenibilidade 
 
 ### Pré-requisitos
 
-- Node.js (v16 ou superior)
+- Node.js (v20 ou superior)
 - npm ou yarn
 
 ### Instalação
@@ -55,27 +56,15 @@ cd dotz-fidelidade
 
 ```bash
 npm install
-# ou
-yarn install
 ```
 
-3. Inicie o servidor mock (JSON Server):
+3. Inicie o servidor:
 
 ```bash
-cd server
-npm install -g json-server
-node server.js
+npm run start:dev
 ```
 
-4. Em outro terminal, inicie a aplicação React:
-
-```bash
-npm start
-# ou
-yarn start
-```
-
-5. Acesse a aplicação no navegador:
+4. Acesse a aplicação no navegador:
 
 ```
 http://localhost:3000
@@ -86,17 +75,16 @@ http://localhost:3000
 Para testar a aplicação, você pode usar as seguintes credenciais:
 
 - **Email**: joao@example.com
-- **Senha**: qualquer senha funcionará no ambiente de desenvolvimento
+- **Senha**: senha123
 
 ## Estrutura de Diretórios
 
 ```
 src/
 ├── core/                     # Camada de domínio
-│   ├── domain/               # Entidades e regras de negócio
-│   │   ├── entities/         # Entidades de domínio
-│   │   ├── repositories/     # Interfaces de repositórios
-│   │   └── services/         # Interfaces de serviços
+│   ├── entities/             # Entidades de domínio
+│   ├── repositories/         # Interfaces de repositórios
+│   └── services/             # Interfaces de serviços
 ├── application/              # Casos de uso da aplicação
 │   ├── useCases/             # Casos de uso específicos
 │   │   ├── auth/             # Autenticação
@@ -130,14 +118,27 @@ src/
 
 A API mock simula o backend do sistema de fidelidade. Ela foi implementada usando JSON Server e fornece os seguintes endpoints:
 
-- `/api/auth/login`: Autenticação de usuários
-- `/api/users`: Gerenciamento de usuários
-- `/api/users/profile`: Perfil do usuário logado
-- `/api/users/addresses`: Endereços do usuário
-- `/api/products`: Catálogo de produtos
-- `/api/categories`: Categorias de produtos
-- `/api/orders`: Pedidos do usuário
-- `/api/transactions`: Transações de pontos
+### **Rotas públicas (sem autenticação)**
+
+- `POST -> api/auth/login`: Autenticação de usuários
+- `POST -> api/auth/register`: Registro de usuários
+- `GET -> api/products`: Catálogo de produtos
+- `GET -> api/products/:id`: Catálogo de produto por ID
+- `GET -> api/categories`: Categorias de produtos
+
+### **Rotas protegidas (com autenticação)**
+
+- `GET -> api/users/profile`: Perfil do usuário logado
+- `PUT -> api/users/profile`: Altera dados do Perfil do usuário logado
+- `PUT -> api/users/points-balance`: Obtem os pontos do usuário logado
+- `GET -> api/users/addresses`: Endereços do usuário
+- `POST -> api/users/addresses`: Adiciona Endereço
+- `PUT -> api/users/addresses`: Altera Endereço
+- `DELETE -> api/users/addresses`: Remove Endereço
+- `GET -> api/orders`: Pedidos do usuário
+- `GET -> api/orders/:id`: Pedidos do usuário pelo ID
+- `POST -> api/orders`: Cria um pedido
+- `GET -> api/transactions`: Transações de pontos do usuário
 
 Os dados são persistidos no arquivo `server/db.json` e resetados a cada reinicialização do servidor.
 
